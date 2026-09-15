@@ -58,7 +58,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9e
 `.trim();
 
 function escapeHtml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return s.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
 }
 
 function inline(s) {
@@ -260,7 +260,7 @@ npx playwright test</code></pre>
     const [file, label] = LESSONS[i];
     const md = await readFile(join(DOCS, file), 'utf8');
     const prev = i > 0 ? LESSONS[i - 1] : null;
-    const next = i < LESSONS.length - 1 ? LESSONS.length - 1 && LESSONS[i + 1] : null;
+    const next = i < LESSONS.length - 1 ? LESSONS[i + 1] : null;
     const html = page({
       title: label,
       body: renderMarkdown(md),
