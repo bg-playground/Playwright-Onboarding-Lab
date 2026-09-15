@@ -1,21 +1,21 @@
-# First Green Playwright
+# Playwright Onboarding Lab
 
-[![Playwright Tests](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml)
-[![GitHub Pages](https://github.com/bg-playground/first-green-playwright/actions/workflows/pages.yml/badge.svg)](https://github.com/bg-playground/first-green-playwright/actions/workflows/pages.yml)
+[![Playwright Tests](https://github.com/bg-playground/Playwright-Onboarding-Lab/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/Playwright-Onboarding-Lab/actions/workflows/playwright.yml)
+[![GitHub Pages](https://github.com/bg-playground/Playwright-Onboarding-Lab/actions/workflows/pages.yml/badge.svg)](https://github.com/bg-playground/Playwright-Onboarding-Lab/actions/workflows/pages.yml)
 
 A beginner on-ramp for **Playwright + GitHub Actions**.
 
 Not another encyclopedia. A path you can finish: terms → one local test → one green CI run → a workflow you can paste into your own repo.
 
-This repository is a **GitHub template**. Use [Use this template](https://github.com/bg-playground/first-green-playwright/generate) when you want a copy that is not a fork. Lessons are also on Pages: [bg-playground.github.io/first-green-playwright](https://bg-playground.github.io/first-green-playwright/).
+This repository is a **GitHub template**. Use [Use this template](https://github.com/bg-playground/Playwright-Onboarding-Lab/generate) when you want a copy that is not a fork. Lessons are also on Pages: [bg-playground.github.io/Playwright-Onboarding-Lab](https://bg-playground.github.io/Playwright-Onboarding-Lab/).
 
 This is intentionally smaller than [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide). Use that after this.
 
 ## 15-minute path
 
 ```bash
-git clone https://github.com/bg-playground/first-green-playwright.git
-cd first-green-playwright
+git clone https://github.com/bg-playground/Playwright-Onboarding-Lab.git
+cd Playwright-Onboarding-Lab
 npm install
 npx playwright install chromium
 npx playwright test
@@ -80,7 +80,7 @@ Anything else on the sign-in form should show `Invalid email or password`.
 - The Actions tab is green on `main`.
 - You can download `playwright-report` from a run.
 - You can point `baseURL` and `webServer.command` at *your* app and keep the same workflow.
-- Lessons load at [bg-playground.github.io/first-green-playwright](https://bg-playground.github.io/first-green-playwright/).
+- Lessons load at [bg-playground.github.io/Playwright-Onboarding-Lab](https://bg-playground.github.io/Playwright-Onboarding-Lab/).
 
 ## GitHub topics
 
