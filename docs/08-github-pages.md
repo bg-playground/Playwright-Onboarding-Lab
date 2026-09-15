@@ -4,7 +4,7 @@ Goal: put the lessons on a public URL, using GitHub Actions, without a separate 
 
 ## Term
 
-**GitHub Pages** is a static website GitHub hosts for a repository. This repo publishes `https://bg-playground.github.io/first-green-playwright/` from `_site/` after a workflow builds it.
+**GitHub Pages** is a static website GitHub hosts for a repository. This repo publishes `https://bg-playground.github.io/Playwright-Onboarding-Lab/` from `_site/` after a workflow builds it.
 
 It is not the HTML report from Playwright. That report is still an artifact on the **Playwright Tests** workflow. Pages is for humans reading lessons.
 
@@ -42,7 +42,7 @@ jobs:
           node-version: lts/*
       - run: node scripts/build-site.mjs
         env:
-          PAGES_BASE_PATH: /first-green-playwright
+          PAGES_BASE_PATH: /Playwright-Onboarding-Lab
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -57,7 +57,7 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-`scripts/build-site.mjs` turns `docs/*.md` into HTML. No extra npm package. Project pages live under `/first-green-playwright/`, so the script prefixes every in-site link with that base path.
+`scripts/build-site.mjs` turns `docs/*.md` into HTML. No extra npm package. Project pages live under `/Playwright-Onboarding-Lab/`, so the script prefixes every in-site link with that base path.
 
 If you steal this for `your-org/your-repo`, change `PAGES_BASE_PATH` to `/your-repo`. User-site repos (`your-name.github.io`) use an empty base path.
 
@@ -73,7 +73,7 @@ Open the printed URL. You should see the lesson list.
 ## What you should see
 
 - A workflow named **GitHub Pages** in the Actions tab.
-- After the first green deploy: `https://bg-playground.github.io/first-green-playwright/`.
+- After the first green deploy: `https://bg-playground.github.io/Playwright-Onboarding-Lab/`.
 - Lesson 00 through 09 as HTML, with next/previous links.
 
 ## When it breaks
@@ -81,7 +81,7 @@ Open the printed URL. You should see the lesson list.
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
 | Deploy job waits, then fails on Pages | Source is still "Deploy from a branch" | Settings → Pages → Source → GitHub Actions |
-| Site 404s at the root | Project site needs the repo name in the path | Keep `PAGES_BASE_PATH=/first-green-playwright` |
+| Site 404s at the root | Project site needs the repo name in the path | Keep `PAGES_BASE_PATH=/Playwright-Onboarding-Lab` |
 | CSS/links look like they ignore the folder | Base path empty on a project site | Set `PAGES_BASE_PATH` to `/repo-name` |
 | Workflow runs on every test change | Path filters missing | Limit `on.push.paths` to `docs/**`, the builder, and this workflow |
 | You expected the Playwright HTML report here | Different artifact | Download `playwright-report` from **Playwright Tests**, or add a second folder later |
