@@ -2,6 +2,8 @@
 
 Goal: run the tests on your machine and know what "green" looks like.
 
+Start here after the [glossary](00-glossary.md).
+
 ## Term
 
 **Local test run** means Playwright starts the demo site, opens Chromium, runs every file in `tests/`, and prints a result in your terminal.
