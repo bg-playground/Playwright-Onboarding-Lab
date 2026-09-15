@@ -17,8 +17,8 @@ If it cannot pass on your laptop, CI will not save you. Local is where you learn
 You need Node.js 20 or newer.
 
 ```bash
-git clone https://github.com/bg-playground/first-green-playwright.git
-cd first-green-playwright
+git clone https://github.com/bg-playground/Playwright-Onboarding-Lab.git
+cd Playwright-Onboarding-Lab
 npm install
 npx playwright install chromium
 npx playwright test
