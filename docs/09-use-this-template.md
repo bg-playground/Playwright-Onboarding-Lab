@@ -14,7 +14,7 @@ A fork keeps a link back here and is the wrong shape when you want *your* produc
 
 ## Copy this — create the repo
 
-1. Open [Use this template](https://github.com/bg-playground/first-green-playwright/generate).
+1. Open [Use this template](https://github.com/bg-playground/Playwright-Onboarding-Lab/generate).
 2. Choose an owner and a name.
 3. Leave it public or private. Pages only works on private repos if your plan allows it.
 4. Create the repository. Do not check "Include all branches" unless you have a reason.
@@ -22,8 +22,8 @@ A fork keeps a link back here and is the wrong shape when you want *your* produc
 Or from the GitHub CLI:
 
 ```bash
-gh repo create my-first-green --template bg-playground/first-green-playwright --public --clone
-cd my-first-green
+gh repo create my-onboarding-lab --template bg-playground/Playwright-Onboarding-Lab --public --clone
+cd my-onboarding-lab
 ```
 
 ## Copy this — first hour in the new repo
