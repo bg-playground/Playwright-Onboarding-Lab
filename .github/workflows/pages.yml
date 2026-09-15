@@ -39,7 +39,7 @@ jobs:
       - name: Build the lesson site
         run: node scripts/build-site.mjs
         env:
-          PAGES_BASE_PATH: /first-green-playwright
+          PAGES_BASE_PATH: /Playwright-Onboarding-Lab
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
