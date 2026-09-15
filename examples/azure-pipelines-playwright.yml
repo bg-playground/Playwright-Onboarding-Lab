@@ -1,0 +1,63 @@
+# Steal-this Azure Pipelines twin of .github/workflows/playwright.yml
+# Lesson: docs/07-azure-devops.md
+# This file is a template. Azure DevOps will not run it from this GitHub repo
+# unless you import the repo into an Azure project and create a pipeline.
+
+trigger:
+  branches:
+    include:
+      - main
+      - master
+
+pr:
+  branches:
+    include:
+      - main
+      - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: UseNode@1
+    inputs:
+      version: '22'
+    displayName: Install Node.js
+
+  - script: npm ci
+    displayName: Install npm packages
+
+  - script: npx playwright install --with-deps chromium
+    displayName: Install Playwright browsers
+
+  - script: npx playwright test
+    displayName: Run Playwright tests
+    env:
+      CI: 'true'
+
+  - task: PublishTestResults@2
+    displayName: Publish JUnit results
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFormat: JUnit
+      testResultsFiles: test-results/e2e-junit-results.xml
+      searchFolder: $(System.DefaultWorkingDirectory)
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: Playwright Tests
+
+  - task: PublishPipelineArtifact@1
+    displayName: Publish HTML report
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: playwright-report
+      artifact: playwright-report
+      publishLocation: pipeline
+
+  - task: PublishPipelineArtifact@1
+    displayName: Publish traces
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: test-results
+      artifact: test-results
+      publishLocation: pipeline
