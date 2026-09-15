@@ -96,12 +96,14 @@ Change only three things at first:
 
 Your app is not this demo. The usual misses:
 
-- Workflow runs in the repo root, but the app lives in `apps/web`. Set `defaults.run.working-directory` or `cd` in each step.
+- Workflow runs in the repo root, but the app lives in `apps/web`. Use [06 — Add this to a monorepo](06-monorepo.md).
 - `webServer.command` starts the API and never prints the frontend URL.
 - Tests hit production because `baseURL` is a live site. Keep first CI against localhost on the runner.
 - You used `npm install` in CI instead of `npm ci`, so the lockfile stopped meaning anything.
 
 More failure patterns: [05 — Common breaks](05-common-breaks.md).
+
+On Azure DevOps instead of GitHub Actions: [07 — Azure DevOps twin](07-azure-devops.md).
 
 ## After it is green
 

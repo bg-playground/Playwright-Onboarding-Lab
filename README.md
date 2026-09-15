@@ -31,6 +31,7 @@ demo-app/                     # the site under test
 tests/                        # copy-paste TypeScript specs
 playwright.config.ts          # how tests run locally and on CI
 .github/workflows/playwright.yml
+examples/azure-pipelines-playwright.yml
 docs/
   00-glossary.md              # words, in one sentence each
   01-first-local-test.md
@@ -38,6 +39,8 @@ docs/
   03-read-a-failure.md
   04-steal-this-workflow.md   # drop this onto your project
   05-common-breaks.md
+  06-monorepo.md              # same loop inside apps/web
+  07-azure-devops.md          # Azure Pipelines twin
 ```
 
 ## Lesson order
@@ -50,6 +53,8 @@ Each lesson uses the same shape: **Term → Why it matters → Copy this → Wha
 4. [Read a failure](docs/03-read-a-failure.md)
 5. [Steal this workflow](docs/04-steal-this-workflow.md)
 6. [Common breaks](docs/05-common-breaks.md)
+7. [Add this to a monorepo](docs/06-monorepo.md)
+8. [Azure DevOps twin](docs/07-azure-devops.md)
 
 ## Demo login
 
@@ -64,6 +69,12 @@ Anything else on the sign-in form should show `Invalid email or password`.
 - The Actions tab is green on `main`.
 - You can download `playwright-report` from a run.
 - You can point `baseURL` and `webServer.command` at *your* app and keep the same workflow.
+
+## GitHub topics
+
+If the About box on this repo is empty, add these under the gear next to **About**:
+
+`playwright` · `github-actions` · `azure-devops` · `ci` · `e2e-testing` · `beginner`
 
 ## License
 

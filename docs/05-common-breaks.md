@@ -48,7 +48,7 @@ Locally you can skip `--with-deps`. On Ubuntu CI, keep it.
 
 **Why:** Monorepos checkout the whole tree. The workflow starts at the root.
 
-**Fix:**
+**Fix:** follow [06 — Add this to a monorepo](06-monorepo.md). The short version:
 
 ```yaml
 defaults:
@@ -56,7 +56,7 @@ defaults:
     working-directory: apps/web
 ```
 
-Also set `path` on the artifact upload from that folder.
+Also set `path` on the artifact upload from the repo root (`apps/web/playwright-report/`).
 
 ### `npm ci` without a lockfile
 
@@ -120,4 +120,8 @@ You can name the failure class in one sentence: install, server, locator, assert
 
 ## Next
 
-Back to the [README](../README.md), or the production catalog: [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide).
+[06 — Add this to a monorepo](06-monorepo.md) if the app is not at the repo root.
+
+[07 — Azure DevOps twin](07-azure-devops.md) if CI is Azure Pipelines.
+
+Otherwise back to the [README](../README.md), or the production catalog: [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide).
