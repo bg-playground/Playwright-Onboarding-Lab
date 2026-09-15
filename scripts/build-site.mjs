@@ -9,7 +9,7 @@ import { basename, join } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const DOCS = join(ROOT, 'docs');
 const OUT = join(ROOT, '_site');
-const BASE = process.env.PAGES_BASE_PATH || '/first-green-playwright';
+const BASE = process.env.PAGES_BASE_PATH || '/Playwright-Onboarding-Lab';
 
 const LESSONS = [
   ['00-glossary.md', 'Glossary'],
@@ -58,7 +58,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9e
 `.trim();
 
 function escapeHtml(s) {
-  return s.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function inline(s) {
@@ -77,7 +77,7 @@ function mapHref(href) {
   if (href.startsWith('../README')) return `${BASE}/`;
   const file = href.split('/').pop();
   if (file && file.endsWith('.md')) return `${BASE}/${file.replace(/\.md$/, '.html')}`;
-  if (href.startsWith('../')) return `https://github.com/bg-playground/first-green-playwright/blob/main/${href.replace(/^\.\.\//, '')}`;
+  if (href.startsWith('../')) return `https://github.com/bg-playground/Playwright-Onboarding-Lab/blob/main/${href.replace(/^\.\.\//, '')}`;
   return href;
 }
 
@@ -208,13 +208,13 @@ function page({ title, body, prev, next }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(title)} · First Green Playwright</title>
+  <title>${escapeHtml(title)} · Playwright Onboarding Lab</title>
   <style>${STYLE}</style>
 </head>
 <body>
   <header>
-    <a class="brand" href="${BASE}/">First <span>Green</span> Playwright</a>
-    <a class="muted" href="https://github.com/bg-playground/first-green-playwright">GitHub</a>
+    <a class="brand" href="${BASE}/">Playwright <span>Onboarding</span> Lab</a>
+    <a class="muted" href="https://github.com/bg-playground/Playwright-Onboarding-Lab">GitHub</a>
   </header>
   <main>
     ${body}
@@ -236,19 +236,19 @@ async function main() {
   }).join('\n');
 
   const indexBody = `
-    <h1>First Green Playwright</h1>
+    <h1>Playwright Onboarding Lab</h1>
     <p>A beginner on-ramp for Playwright + GitHub Actions. Terms, copy-paste demos, and a first green CI run.</p>
-    <p class="muted">This site is the lesson set. The tests and workflow live in the <a href="https://github.com/bg-playground/first-green-playwright">GitHub template</a>.</p>
+    <p class="muted">This site is the lesson set. The tests and workflow live in the <a href="https://github.com/bg-playground/Playwright-Onboarding-Lab">GitHub template</a>.</p>
     <p>
-      <a href="https://github.com/bg-playground/first-green-playwright/generate">Use this template</a>
+      <a href="https://github.com/bg-playground/Playwright-Onboarding-Lab/generate">Use this template</a>
       ·
-      <a href="https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml">CI badge target</a>
+      <a href="https://github.com/bg-playground/Playwright-Onboarding-Lab/actions/workflows/playwright.yml">CI badge target</a>
     </p>
     <h2>Lesson order</h2>
     ${lessonCards}
     <h2>15-minute path</h2>
-    <pre><code>git clone https://github.com/bg-playground/first-green-playwright.git
-cd first-green-playwright
+    <pre><code>git clone https://github.com/bg-playground/Playwright-Onboarding-Lab.git
+cd Playwright-Onboarding-Lab
 npm install
 npx playwright install chromium
 npx playwright test</code></pre>
@@ -260,7 +260,7 @@ npx playwright test</code></pre>
     const [file, label] = LESSONS[i];
     const md = await readFile(join(DOCS, file), 'utf8');
     const prev = i > 0 ? LESSONS[i - 1] : null;
-    const next = i < LESSONS.length - 1 ? LESSONS[i + 1] : null;
+    const next = i < LESSONS.length - 1 ? LESSONS.length - 1 && LESSONS[i + 1] : null;
     const html = page({
       title: label,
       body: renderMarkdown(md),
