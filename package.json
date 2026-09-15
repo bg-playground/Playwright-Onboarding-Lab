@@ -1,5 +1,5 @@
 {
-  "name": "first-green-playwright",
+  "name": "playwright-onboarding-lab",
   "version": "1.0.0",
   "private": true,
   "description": "Beginner on-ramp for Playwright + GitHub Actions: terminology, copy-paste demos, and a first-green CI path.",
