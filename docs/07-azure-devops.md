@@ -161,4 +161,8 @@ Azure is not a different Playwright. It is a different upload button. Steal the 
 
 ## Next
 
-Back to the [README](../README.md), or the production catalog: [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide).
+[08 — Publish a Pages site](08-github-pages.md) if you want the lessons on a public URL.
+
+[09 — Use this template](09-use-this-template.md) if you are starting a new repo from this one.
+
+Otherwise back to the [README](../README.md), or the production catalog: [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide).
