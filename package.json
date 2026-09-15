@@ -1,0 +1,16 @@
+{
+  "name": "first-green-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner on-ramp for Playwright + GitHub Actions: terminology, copy-paste demos, and a first-green CI path.",
+  "scripts": {
+    "demo": "node scripts/serve.mjs",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.1"
+  }
+}
