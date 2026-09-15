@@ -1,5 +1,7 @@
 # First Green Playwright
 
+[![Playwright Tests](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml)
+
 A beginner on-ramp for **Playwright + GitHub Actions**.
 
 Not another encyclopedia. A path you can finish: terms → one local test → one green CI run → a workflow you can paste into your own repo.
