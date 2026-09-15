@@ -301,7 +301,7 @@ await page.goto('/login.html'); // becomes http://127.0.0.1:4173/login.html
 
 ## GitHub Pages
 
-**Term.** GitHub Pages is a static website GitHub hosts for a repository. This repo's lessons publish to `https://bg-playground.github.io/first-green-playwright/`.
+**Term.** GitHub Pages is a static website GitHub hosts for a repository. This repo's lessons publish to `https://bg-playground.github.io/Playwright-Onboarding-Lab/`.
 
 **Why it matters.** People can read the path without cloning. It is not the Playwright HTML report.
 
@@ -321,7 +321,7 @@ See [08 — Publish a Pages site](08-github-pages.md).
 
 **Why it matters.** A fork is for contributing back. A template copy is for starting *your* project with the workflow already in the tree.
 
-**Copy this.** [Use this template](https://github.com/bg-playground/first-green-playwright/generate)
+**Copy this.** [Use this template](https://github.com/bg-playground/Playwright-Onboarding-Lab/generate)
 
 **What you should see.** A new repo you own, with Actions of its own, and no "forked from" line.
 
