@@ -1,5 +1,8 @@
 # Publishes the lesson site to GitHub Pages.
 # Lesson: docs/08-github-pages.md
+#
+# First-time setup (required once, by a repo admin):
+# Settings → Pages → Build and deployment → Source → GitHub Actions
 name: GitHub Pages
 
 on:
@@ -33,11 +36,6 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Enable and configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - name: Build the lesson site
         run: node scripts/build-site.mjs
         env:
@@ -51,9 +49,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
