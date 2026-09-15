@@ -41,7 +41,7 @@ test('home page shows the demo heading', async ({ page }) => {
 
 **What you should see.** A yellow dot on the commit, then a green check.
 
-**When it breaks.** Actions is disabled, or the workflow file is not under `.github/workspaces/`.
+**When it breaks.** Actions is disabled, or the workflow file is not under `.github/workflows/`.
 
 **Bad analogy to drop.** "CI is the cloud." The cloud is a building. CI is a checklist that building runs.
 
