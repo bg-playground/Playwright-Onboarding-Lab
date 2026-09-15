@@ -299,6 +299,38 @@ await page.goto('/login.html'); // becomes http://127.0.0.1:4173/login.html
 
 ---
 
+## GitHub Pages
+
+**Term.** GitHub Pages is a static website GitHub hosts for a repository. This repo's lessons publish to `https://bg-playground.github.io/first-green-playwright/`.
+
+**Why it matters.** People can read the path without cloning. It is not the Playwright HTML report.
+
+**Copy this.** Settings → Pages → Source → **GitHub Actions**. The workflow is `.github/workflows/pages.yml`.
+
+**What you should see.** A live lesson list at the Pages URL after the **GitHub Pages** workflow is green.
+
+**When it breaks.** Source is still "Deploy from a branch," or `PAGES_BASE_PATH` does not match the repo name.
+
+See [08 — Publish a Pages site](08-github-pages.md).
+
+---
+
+## Template repository
+
+**Term.** A template repository is a repo with the template flag on. **Use this template** copies the default branch into a new repo that is not a fork.
+
+**Why it matters.** A fork is for contributing back. A template copy is for starting *your* project with the workflow already in the tree.
+
+**Copy this.** [Use this template](https://github.com/bg-playground/first-green-playwright/generate)
+
+**What you should see.** A new repo you own, with Actions of its own, and no "forked from" line.
+
+**When it breaks.** You clicked Fork instead. Fine for PRs to this repo. Wrong for your product.
+
+See [09 — Use this template](09-use-this-template.md).
+
+---
+
 ## How to use this page
 
 You do not need to memorize it. When a later lesson says "artifact" or "trace," jump here, read that one block, go back.
