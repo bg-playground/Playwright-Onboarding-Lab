@@ -1,10 +1,13 @@
 # First Green Playwright
 
 [![Playwright Tests](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/bg-playground/first-green-playwright/actions/workflows/playwright.yml)
+[![GitHub Pages](https://github.com/bg-playground/first-green-playwright/actions/workflows/pages.yml/badge.svg)](https://github.com/bg-playground/first-green-playwright/actions/workflows/pages.yml)
 
 A beginner on-ramp for **Playwright + GitHub Actions**.
 
 Not another encyclopedia. A path you can finish: terms → one local test → one green CI run → a workflow you can paste into your own repo.
+
+This repository is a **GitHub template**. Use [Use this template](https://github.com/bg-playground/first-green-playwright/generate) when you want a copy that is not a fork. Lessons are also on Pages: [bg-playground.github.io/first-green-playwright](https://bg-playground.github.io/first-green-playwright/).
 
 This is intentionally smaller than [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide). Use that after this.
 
@@ -33,7 +36,9 @@ demo-app/                     # the site under test
 tests/                        # copy-paste TypeScript specs
 playwright.config.ts          # how tests run locally and on CI
 .github/workflows/playwright.yml
+.github/workflows/pages.yml
 examples/azure-pipelines-playwright.yml
+scripts/build-site.mjs
 docs/
   00-glossary.md              # words, in one sentence each
   01-first-local-test.md
@@ -43,6 +48,8 @@ docs/
   05-common-breaks.md
   06-monorepo.md              # same loop inside apps/web
   07-azure-devops.md          # Azure Pipelines twin
+  08-github-pages.md          # lesson site on Pages
+  09-use-this-template.md     # Use this template button
 ```
 
 ## Lesson order
@@ -57,6 +64,8 @@ Each lesson uses the same shape: **Term → Why it matters → Copy this → Wha
 6. [Common breaks](docs/05-common-breaks.md)
 7. [Add this to a monorepo](docs/06-monorepo.md)
 8. [Azure DevOps twin](docs/07-azure-devops.md)
+9. [Publish a Pages site](docs/08-github-pages.md)
+10. [Use this template](docs/09-use-this-template.md)
 
 ## Demo login
 
@@ -71,6 +80,7 @@ Anything else on the sign-in form should show `Invalid email or password`.
 - The Actions tab is green on `main`.
 - You can download `playwright-report` from a run.
 - You can point `baseURL` and `webServer.command` at *your* app and keep the same workflow.
+- Optional: lessons load at [bg-playground.github.io/first-green-playwright](https://bg-playground.github.io/first-green-playwright/) after Pages is pointed at GitHub Actions.
 
 ## GitHub topics
 

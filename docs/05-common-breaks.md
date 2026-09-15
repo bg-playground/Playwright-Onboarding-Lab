@@ -124,4 +124,8 @@ You can name the failure class in one sentence: install, server, locator, assert
 
 [07 — Azure DevOps twin](07-azure-devops.md) if CI is Azure Pipelines.
 
+[08 — Publish a Pages site](08-github-pages.md) if you want the lessons on a public URL.
+
+[09 — Use this template](09-use-this-template.md) if you are starting a new repo from this one.
+
 Otherwise back to the [README](../README.md), or the production catalog: [playwright-field-guide](https://github.com/bg-playground/playwright-field-guide).
